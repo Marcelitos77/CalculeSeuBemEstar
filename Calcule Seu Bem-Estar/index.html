@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CalculaSaúde é uma aplicação web onde você pode calcular seu IMC (Índice de Massa Corporal)"
+    />
+    <link
+      rel="shortcut icon"
+      href="./src/images/istockphoto-1208604845-612x612.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/scrollbar.css" />
+    <link rel="stylesheet" href="./src/css/font-awesome.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/responsive.css" />
+    <title>Calcule Seu Bem - Estar</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="./src/images/istockphoto-1208604845-612x612.jpg"
+          width="80px"
+          alt="logo imc"
+        />
+        <h1 class="title">Calcule Seu Bem - Estar</h1>
+      </div>
+
+      <input class="toggle-theme" type="checkbox" id="switch" /><label
+        for="switch"
+        >Toggle</label
+      >
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2 class="card-title">Calcule Seu Bem - Estar</h2>
+        <p class="info-text">
+          Coloque os seus dados na calculadora e calcule o seu IMC:
+        </p>
+
+        <hr />
+
+        <form action="index.html" method="get" class="form show">
+          <label>Gênero</label>
+          <div class="radios-container">
+            <div class="male-radio-container">
+              <label for="male">Masculino</label>
+              <input type="radio" name="gender" id="male" value="male" />
+            </div>
+
+            <div class="female-radio-container">
+              <label for="female">Feminino</label>
+              <input type="radio" name="gender" id="female" value="female" />
+            </div>
+          </div>
+
+          <label for="age">Idade</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Ex: 35"
+            class="input"
+          />
+
+          <label for="weight">Peso (kg)</label>
+          <input
+            type="number"
+            name="weight"
+            id="weight"
+            placeholder="Ex: 75"
+            class="input"
+          />
+
+          <label for="height">Altura (cm)</label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            placeholder="Ex: 1,77"
+            class="input"
+          />
+
+          <button type="submit" class="submit-button">Calcular</button>
+        </form>
+
+        <div class="result-card hidden">
+          <p class="text">RESULTADO:</p>
+
+          <div class="result-container">
+            <p class="result-text">Seu IMC é: <span id="imc-value"></span></p>
+          </div>
+
+          <div id="health-tips-link" class="health-tips hidden">
+            <a href="#" target="_blank" id="tips-link">Veja dicas de saúde</a>
+          </div>
+
+          <button class="return-btn">Calcular Novamente</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">&#x2716;</button>
+        <img src="./src/images/logo.png" alt="logo da clausula modal" />
+        <h2>Bem-vindo ao Calcule Seu Bem - Estar!</h2>
+        <p>
+          Aqui, você pode calcular o seu Índice de Massa Corporal (IMC) e obter
+          uma avaliação da sua condição física.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#"><i class="fa-brands fa-square-github"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <p>&copy;2025 Calcule Seu Bem - Estar</p>
+    </footer>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
